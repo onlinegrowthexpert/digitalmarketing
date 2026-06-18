@@ -115,17 +115,4 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
-  /* ---------- Contact form ----------*/
-var contactForm = document.getElementById('contact-form');
-var formSuccess = document.getElementById('form-success');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!contactForm.checkValidity()) return;
-
-    formSuccess.hidden = false;
-    contactForm.reset();
-  });
-}
+  
