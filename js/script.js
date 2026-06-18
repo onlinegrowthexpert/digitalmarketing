@@ -117,10 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---------- Contact form ----------
-     var contactForm = document.getElementById('contact-form');
+var contactForm = document.getElementById('contact-form');
+var formSuccess = document.getElementById('form-success');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', function () {
-    console.log('Form submitted');
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!contactForm.checkValidity()) return;
+
+    formSuccess.hidden = false;
+    contactForm.reset();
   });
 }
