@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ---------- Contact form ----------
+  /* ---------- Contact form ---------- */
      Front-end only: wire this up to a real backend
      (Formspree, Google Sheets, your own server, etc.)
      before relying on it to receive enquiries. */
