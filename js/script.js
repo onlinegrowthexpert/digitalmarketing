@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ---------- Contact form ----------
+  /* ---------- Contact form ----------*/
 var contactForm = document.getElementById('contact-form');
 var formSuccess = document.getElementById('form-success');
 
