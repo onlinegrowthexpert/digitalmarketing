@@ -91,6 +91,87 @@
             font-style:italic;
         }
     </style>
+  <!-- ============================================================
+     PAGE-ONLY CSS — just for this blog listing page.
+     Header, footer, buttons, .hero, .section, .cta-band are
+     all reused as-is from css/style.css.
+============================================================ -->
+<style>
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .blog-card {
+    background: var(--paper);
+    border: 1px solid var(--line-on-light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .blog-card:hover { transform: translateY(-4px); border-color: var(--amber); }
+
+  .blog-card__image-wrap {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--paper-soft);
+  }
+  .blog-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .blog-card__body {
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .blog-card__meta {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--vermilion);
+    margin-bottom: 10px;
+  }
+  .blog-card__title {
+    font-size: 1.05rem;
+    margin: 0 0 10px;
+  }
+  .blog-card__title a { color: var(--ink); }
+  .blog-card__title a:hover { color: var(--vermilion); }
+
+  .blog-card__excerpt {
+    color: var(--slate);
+    font-size: 0.92rem;
+    margin: 0 0 18px;
+  }
+  .blog-card__readmore {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+  }
+  .blog-card__readmore:hover { color: var(--vermilion); }
+  .blog-card__readmore .btn-arrow { transition: transform 0.2s ease; }
+  .blog-card__readmore:hover .btn-arrow { transform: translateX(3px); }
+
+  @media (max-width: 980px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .blog-grid { grid-template-columns: 1fr; }
+  }
+</style>
 
 </head>
 
